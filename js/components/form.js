@@ -1,10 +1,16 @@
 import React from 'react';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
 
-export default function Form(props) {
+export function Form(props) {
+	let guessInput;
+
 	return (
-		<form>
-			<input type="text" placeholder="Enter your Guess" />
+		<form onSubmit={() => props.dispatch(actions.makeGuess(guessInput.value))}>
+			<input type="text" placeholder="Enter your Guess" ref={ref => guessInput = ref} />
 			<button type="button">Guess</button>
 		</form>
 	)
 }
+
+export default connect()(Form);
