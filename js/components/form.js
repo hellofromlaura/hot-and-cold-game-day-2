@@ -8,7 +8,7 @@ export function Form(props) {
 	return (
 		<form onSubmit={() => props.dispatch(actions.makeGuess(guessInput.value))}>
 			<input type="text" placeholder="Enter your Guess" ref={ref => guessInput = ref} />
-			<button type="button">Guess</button>
+			<button type="submit">Guess</button>
 		</form>
 	)
 }
