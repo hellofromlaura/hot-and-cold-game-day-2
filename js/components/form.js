@@ -6,7 +6,10 @@ export function Form(props) {
 	let guessInput;
 
 	return (
-		<form onSubmit={() => props.dispatch(actions.makeGuess(guessInput.value))}>
+		<form onSubmit={(e) => {
+			e.preventDefault();
+			props.dispatch(actions.makeGuess(guessInput.value));
+		}}>
 			<input type="text" placeholder="Enter your Guess" ref={ref => guessInput = ref} />
 			<button type="submit">Guess</button>
 		</form>
