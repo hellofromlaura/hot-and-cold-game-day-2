@@ -4,7 +4,7 @@ import GuessCount from './guess-count';
 import GuessHistory from './guess-history';
 import Feedback from './feedback';
 
-export class Game extends React.Component {
+export default class Game extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -12,10 +12,11 @@ export class Game extends React.Component {
 	render() {
 		return (
 			<div>
-				<Feedback />
+				<h1>HOT or COLD</h1>
+				{/* <Feedback />
 				<Form />
 				<GuessCount />
-				<GuessHistory />
+				<GuessHistory /> */}
 			</div>
 		);
 	}

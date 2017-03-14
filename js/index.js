@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () =>
     ReactDOM.render(
     	<Provider store={store}>
     		<Game />
-    	</Provider>, 
+    	</Provider>,
     	document.getElementById('app')
     )
 );
