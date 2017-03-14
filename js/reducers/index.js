@@ -30,6 +30,13 @@ export default (state, action) => {
 
             return state;
         }
+        else if (guess<1 || guess>100) {
+            state = Object.assign({}, state, {
+                feedback: 'Please enter between 1 and 100'
+          });
+
+            return state;
+        }
 
         const difference = Math.abs(guess - state.correctAnswer);
 
