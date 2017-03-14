@@ -2,7 +2,7 @@ import {
     NEW_GAME,
     MAKE_GUESS,
     TOGGLE_INFO_MODAL
-} from './actions';
+} from '../actions';
 
 const initialState = {
     guesses: [],
