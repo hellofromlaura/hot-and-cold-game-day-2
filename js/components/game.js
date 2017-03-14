@@ -13,9 +13,9 @@ export default class Game extends React.Component {
 		return (
 			<div>
 				<h1>HOT or COLD</h1>
-				{/* <Feedback />
+				<Feedback />
 				<Form />
-				<GuessCount />
+				{/* <GuessCount />
 				<GuessHistory /> */}
 			</div>
 		);

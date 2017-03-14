@@ -3,12 +3,14 @@ import { connect } from 'react-redux';
 
 export function Feedback(props) {
 	return (
-		{feedback}
+		<div>
+			{props.feedback}
+		</div>
 	);
 };
 
 const mapStateToProps = (state, props) => ({
-	feedback: state
+	feedback: state.feedback
 });
 
 export default connect(mapStateToProps)(Feedback);
