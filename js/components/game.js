@@ -32,7 +32,7 @@ export class Game extends React.Component {
 					</nav>
 					<h1>HOT or COLD</h1>
 				</header>
-				<div id="modal">
+				<div id="modal" className="overlay">
 					<Modal />
 				</div>
 				<div id="gameBox">

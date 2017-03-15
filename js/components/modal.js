@@ -6,7 +6,7 @@ import store from '../store';
 export function Modal(props) {
   if (props.showInfoModal) {
     return (
-        <div>
+        <div className='overlay-content'>
           <h3>What do I do?</h3>
           <div>
             <p>This is a Hot or Cold Number Guessing Game. The game goes like this: </p>
