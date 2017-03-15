@@ -9,7 +9,7 @@ export function Feedback(props) {
 	);
 };
 
-const mapStateToProps = (state, props) => ({
+const mapStateToProps = state => ({
 	feedback: state.feedback
 });
 
