@@ -1,5 +1,5 @@
 #app {
-  background-color: lightgrey;
+  background-color: #322E52;
   border-radius: 5px;
   padding: 10px;
 }
@@ -20,25 +20,34 @@ a {
 }
 
 ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   list-style: none;
   padding: 0;
 }
 
+nav ul {
+  justify-content: space-around;
+
+}
+
 nav ul li:first-child {
   padding-left: 10px;
+
 }
 
 nav ul li:last-child {
-  float: right;
   padding-right: 10px;
 }
+
 
 #gameBox {
   margin-left: auto;
   margin-right: auto;
   width: 300px;
   height: 350px;
-  background-color: darkgrey;
+  background-color: #CCB9A2;
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 200px;
@@ -52,19 +61,45 @@ nav ul li:last-child {
 }
 
 #guessList {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   margin: 20px 0;
+  padding: 2px 20px;
   font-size: 20px;
   color: white;
 }
 
 #guessList li {
+  background-color: #5C5789;
   padding: 3px 5px;
 }
 
 #guessCount {
-  padding: 10px 0;
+  padding: 25px 0;
   color: white;
 }
+
+input[type=text] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+button {
+    background-color: #5C5789; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 80%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
