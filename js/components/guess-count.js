@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 export function GuessCount(props) {
 	return (
-		<div>
+		<div id='guessCount'>
 			{`Guess #${props.guesses.length}!`}
 		</div>
 	);

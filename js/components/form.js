@@ -6,7 +6,7 @@ export function Form(props) {
 	let guessInput;
 
 	return (
-		<form onSubmit={(e) => {
+		<form id='form' onSubmit={(e) => {
 			e.preventDefault();
 			props.dispatch(actions.makeGuess(guessInput.value));
 			guessInput.value = '';

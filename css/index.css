@@ -1,0 +1,70 @@
+#app {
+  background-color: lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+header {
+  margin:0;
+  padding:0;
+  color: white;
+}
+
+header h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li:first-child {
+  padding-left: 10px;
+}
+
+nav ul li:last-child {
+  float: right;
+  padding-right: 10px;
+}
+
+#gameBox {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 350px;
+  background-color: darkgrey;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+
+#feedback {
+  margin: 20px 0;
+  color:white;
+  font-size: 20px;
+}
+
+#guessList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px 0;
+  font-size: 20px;
+  color: white;
+}
+
+#guessList li {
+  padding: 3px 5px;
+}
+
+#guessCount {
+  padding: 10px 0;
+  color: white;
+}

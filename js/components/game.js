@@ -19,20 +19,22 @@ export class Game extends React.Component {
 	render() {
 		return (
 			<div>
-				<nav>
-					<ul>
-						<li>
-							<a href="#" onClick={() => this.props.dispatch(actions.toggleInfoModal())}>How to Play</a>
-						</li>
-						<li>
-							<a href="#" onClick={() => this.props.dispatch(actions.newGame())}>New Game</a>
-						</li>
-					</ul>
-				</nav>
+				<header>
+					<nav>
+						<ul>
+							<li>
+								<a href="#" onClick={() => this.props.dispatch(actions.toggleInfoModal())}>How to Play</a>
+							</li>
+							<li>
+								<a href="#" onClick={() => this.props.dispatch(actions.newGame())}>New Game</a>
+							</li>
+						</ul>
+					</nav>
+					<h1>HOT or COLD</h1>
+				</header>
 				<div id="modal">
 					<Modal />
 				</div>
-				<h1>HOT or COLD</h1>
 				<div id="gameBox">
 					<Feedback />
 					<Form />

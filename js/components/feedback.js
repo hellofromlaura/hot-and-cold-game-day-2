@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 export function Feedback(props) {
 	return (
-		<div>
+		<div id='feedback'>
 			{props.feedback}
 		</div>
 	);
