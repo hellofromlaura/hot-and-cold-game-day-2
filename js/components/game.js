@@ -12,6 +12,10 @@ export class Game extends React.Component {
 		super(props);
 	}
 
+	componentWillMount(){
+		this.props.dispatch(actions.newGame());
+	}
+
 	render() {
 		return (
 			<div>
