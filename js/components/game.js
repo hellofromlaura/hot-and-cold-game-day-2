@@ -3,6 +3,7 @@ import Form from './form';
 import GuessCount from './guess-count';
 import GuessHistory from './guess-history';
 import Feedback from './feedback';
+import Modal from './modal';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
 
@@ -24,9 +25,9 @@ export class Game extends React.Component {
 						</li>
 					</ul>
 				</nav>
-				{/* <div id="modal">
+				<div id="modal">
 					<Modal />
-				</div> */}
+				</div>
 				<h1>HOT or COLD</h1>
 				<div id="gameBox">
 					<Feedback />
@@ -38,7 +39,5 @@ export class Game extends React.Component {
 		);
 	}
 }
-
-
 
 export default connect()(Game);
