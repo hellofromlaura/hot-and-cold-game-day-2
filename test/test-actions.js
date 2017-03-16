@@ -35,7 +35,6 @@ describe('Action: newGame', function(){
 
     let result = actions.newGame();
     result.type.should.equal('NEW_GAME');
-    result.correctAnswer.should.be.an('number');
 
   })
 })

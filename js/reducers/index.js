@@ -7,7 +7,7 @@ import {
 const initialState = {
     guesses: [],
     feedback: 'Make your guess!',
-    correctAnswer: 50,
+    correctAnswer: null,
     showInfoModal: false
 };
 
@@ -17,7 +17,7 @@ export default (state, action) => {
         state = Object.assign({
         }, initialState, {
             fewestGuesses: state.fewestGuesses,
-            correctAnswer: action.correctAnswer
+            correctAnswer: Math.round(Math.random() * 100),
         });
         return state;
     }

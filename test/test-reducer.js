@@ -1,6 +1,7 @@
 import React from 'react';
 import chai from 'chai';
 const should = chai.should();
+const expect = chai.expect;
 import * as actions from '../js/actions';
 import reducers from '../js/reducers';
 
@@ -8,10 +9,10 @@ describe('game reducer', function () {
 
 	it('should return the initial state', function () {
 		let result = reducers(undefined, {});
-		
+
 		result.guesses.should.be.an('array');
 		result.feedback.should.eq('Make your guess!');
-		result.correctAnswer.should.be.an('number');
+		expect(result.correctAnswer).be.eq(null);
 		result.showInfoModal.should.be.eq(false);
 
 	})
@@ -39,12 +40,15 @@ describe('game reducer', function () {
 	})
 
 	it('give hot or cold feedback', function () {
-		let guess = 45;
-		let result = reducers(undefined, {
+
+		let newGameState = reducers(undefined, {
+			type: 'NEW_GAME',
+		});
+		let guess = newGameState.correctAnswer + 1;
+		let result = reducers(newGameState, {
 			type: 'MAKE_GUESS',
 			guess: guess
 		});
-
 		result.feedback.should.eq('You\'re Hot!');
 
 	})
@@ -52,10 +56,9 @@ describe('game reducer', function () {
 	it('should make sure new game resets the game', function () {
 		let result = reducers(undefined, {
 			type: 'NEW_GAME',
-			correctAnswer: 30
 		});
 
-		result.correctAnswer.should.eq(30);
+		result.correctAnswer.should.an('number');
 
 	})
 
